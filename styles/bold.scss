@@ -1,0 +1,29 @@
+// ITCSS Architecture
+// DOCS: https://desarrolloweb.com/articulos/itcss-que-es-bases.html
+
+// SETTINGS
+  @import "./01-settings/index";
+
+// TOOLS
+  @import "./02-tools/index.scss";
+
+// GENERIC
+  @import "./03-generic/03-generic.normalize";
+  @import "./03-generic/03-generic.typography";
+
+// ELEMENTS
+  @import "./04-elements/04-elements.body";
+  @import "./04-elements/04-elements.main";
+
+// OBJECTS
+  @import "./05-objects/05-objects.global-layout";
+  @import "./05-objects/05-objects.home";
+  @import "./05-objects/05-objects.internals";
+
+// COMPONENTS
+  @import "./06-components/06-components.header";
+
+// UTILITIES
+  @import "./07-utilities/07-utilities.demo-and-tests";
+  @import "./07-utilities/07-utilities.display";
+  @import "./07-utilities/07-utilities.spacing";
