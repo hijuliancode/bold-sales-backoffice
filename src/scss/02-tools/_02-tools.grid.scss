@@ -1,2 +1,114 @@
 // _02-tools.grid.scss
 
+@use "sass:math";
+
+$columns: 12;
+
+@mixin grid-base($bkp) {
+  display: grid;
+
+  // Grid - Repeat Columns
+  &.#{$bkp}-2-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &.#{$bkp}-3-columns {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  &.#{$bkp}-4-columns {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  &.#{$bkp}-5-columns {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  &.#{$bkp}-6-columns {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  // Size of Columns
+  &.#{$bkp}-columns-1-11 {
+    grid-template-columns: (math.div(100%, $columns) * 1) 1fr;
+  }
+  &.#{$bkp}-columns-2-10 {
+    grid-template-columns: (math.div(100%, $columns) * 2) 1fr;
+  }
+  &.#{$bkp}-columns-3-9 {
+    grid-template-columns: (math.div(100%, $columns) * 3) 1fr;
+  }
+  &.#{$bkp}-columns-4-8 {
+    grid-template-columns: (math.div(100%, $columns) * 4) 1fr;
+  }
+  &.#{$bkp}-columns-5-7 {
+    grid-template-columns: (math.div(100%, $columns) * 5) 1fr;
+  }
+  &.#{$bkp}-columns-6-6 {
+    grid-template-columns: (math.div(100%, $columns) * 6) 1fr;
+  }
+  &.#{$bkp}-columns-7-5 {
+    grid-template-columns: (math.div(100%, $columns) * 7) 1fr;
+  }
+  &.#{$bkp}-columns-8-4 {
+    grid-template-columns: (math.div(100%, $columns) * 8) 1fr;
+  }
+  &.#{$bkp}-columns-9-3 {
+    grid-template-columns: (math.div(100%, $columns) * 9) 1fr;
+  }
+  &.#{$bkp}-columns-10-2 {
+    grid-template-columns: (math.div(100%, $columns) * 10) 1fr;
+  }
+  &.#{$bkp}-columns-11-1 {
+    grid-template-columns: (math.div(100%, $columns) * 11) 1fr;
+  }
+  &.#{$bkp}-columns-12 {
+    grid-template-columns: (math.div(100%, $columns) * 12) 100%;
+  }
+}
+
+@include media-bkp-up("xxs") {
+  .grid,
+  .grid-xxs {
+    gap: 16px;
+    @include grid-base("xxs");
+  }
+}
+
+@include media-bkp-up("xs") {
+  .grid-xs {
+    gap: 16px;
+    @include grid-base("xs");
+  }
+}
+
+@include media-bkp-up("sm") {
+  .grid-sm {
+    gap: 16px;
+    @include grid-base("sm");
+  }
+}
+
+@include media-bkp-up("md") {
+  .grid-md {
+    gap: 16px;
+    @include grid-base("md");
+  }
+}
+
+@include media-bkp-up("lg") {
+  .grid-lg {
+    gap: 16px;
+    @include grid-base("lg");
+  }
+}
+
+@include media-bkp-up("xl") {
+  .grid-xl {
+    gap: 16px;
+    @include grid-base("xl");
+  }
+}
+
+@include media-bkp-up("xxl") {
+  .grid-xxl {
+    gap: 16px;
+    @include grid-base("xxl");
+  }
+}
