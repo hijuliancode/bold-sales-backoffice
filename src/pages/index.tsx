@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import HelloWorld from '../components/hello-world/hello-world'
+import HelloWorld from '../components/HelloWorld/HelloWorld'
 
 export default function Home() {
   return (

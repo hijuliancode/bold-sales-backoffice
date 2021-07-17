@@ -1,4 +1,4 @@
-import '../styles/bold.scss'
+import '../scss/bold.scss'
 import type { AppProps } from 'next/app'
 
 function MyApp({ Component, pageProps }: AppProps) {
