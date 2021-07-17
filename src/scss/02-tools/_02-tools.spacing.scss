@@ -1,2 +1,70 @@
 // _02-tools.spacing.scss
 
+/*
+    Here we create a spacing clases, ex mb-4, pt-6,
+    spacing size is the result of = (number on class * baseSize),
+    m = margin , p = padding,
+    l = left, r = right, t = top, b = bottom,
+
+    so mb-4 is equal to (4 * 4 = 16) = margin-bottom: 16px
+    so pt-6 is equal to (6 * 4 = 24) = padding-top: 24px 
+    so ml-8 is equal to (8 * 4 = 32) = margin-left: 32px 
+
+    also, you we can add breakpoints to the classes, (remember mobile first)
+    (check breakpoints in _01-settings.responsive.scss)
+
+    so mb-md-8 works on 768px up screen
+    so pt-lg-5 works on 1024px up screen
+  */
+
+// 01) $spacing-base-size is defined on _01-settings.spacing.scss
+  $baseSize: $spacing-base-size;
+// 02) Adds more flexibility than TOKENS to spacing classes
+  $spaces: ( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 );
+// 03) Sides of spacing classes
+  $sides: (top, right, bottom, left);
+// 04) xxs it's not necessary, it's the default spacing
+  $breakpoints: (xs, sm, md, lg, xl, xxl);
+
+body { // To add "specificity" to spacing classes
+
+  @each $space in $spaces {
+    .m-#{ $space } {
+      margin: #{$space * $baseSize};
+    }
+    .p-#{ $space } {
+      padding: #{$space * $baseSize};
+    }
+
+    @each $side in $sides {
+      .m#{str-slice($side, 0, 1)}-#{ $space } {
+        margin-#{ $side }: #{$space * $baseSize};
+      }
+      .p#{str-slice($side, 0, 1)}-#{ $space } {
+        padding-#{ $side }: #{$space * $baseSize};
+      }
+    }
+  }
+
+  @each $breakpoint in $breakpoints {
+    @include media-bkp-up("#{ $breakpoint }") {
+      @each $space in $spaces {
+        .m-#{ $breakpoint }-#{ $space } {
+          margin: #{$space * $baseSize};
+        }
+        .p-#{ $breakpoint }-#{ $space } {
+          padding: #{$space * $baseSize};
+        }
+
+        @each $side in $sides {
+          .m#{str-slice($side, 0, 1)}-#{ $breakpoint }-#{ $space } {
+            margin-#{ $side }: #{$space * $baseSize};
+          }
+          .p#{str-slice($side, 0, 1)}-#{ $breakpoint }-#{ $space } {
+            padding-#{ $side }: #{$space * $baseSize};
+          }
+        }
+      }
+    }
+  }
+}
