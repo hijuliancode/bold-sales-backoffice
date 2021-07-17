@@ -1,2 +1,34 @@
 // _07-utilities.display.scss
 
+body { // To add "specificity" to spacing classes
+
+  // Visibility
+    .d-none   { display: none; }
+    .d-flex   { display: flex; }
+    .d-block  { display: block; }
+  
+    .only-mobile {
+      @include media-bkp-up("xl") {
+        display: none;
+      }
+    }
+  
+    .only-desktop {
+      @include media-bkp-max("xl") {
+        display: none;
+      }
+    }
+  
+  // Flex classes
+    .direction-column           { flex-direction: column; }
+    .direction-row              { flex-direction: row; }
+  
+    .align-items-start          { align-items: flex-start; }
+    .align-items-center         { align-items: center ; }
+    .align-items-end            { align-items: flex-end; }
+  
+    .justify-content-around     { justify-content: space-around; }
+    .justify-content-between    { justify-content: space-between; }
+    .justify-content-evenly     { justify-content: space-evenly; }
+  }
+  
