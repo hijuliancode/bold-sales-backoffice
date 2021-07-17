@@ -1,2 +1,16 @@
 // _05-objects.global-layout.scss
 
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: block;
+  flex-grow: 1;
+}
