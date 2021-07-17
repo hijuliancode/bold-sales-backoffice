@@ -1,1 +1,21 @@
 // _01-settings.variables.scss
+
+  $BOLD_HEADER_HEIGHT_MOB:      64px;
+  $BOLD_HEADER_HEIGHT_DESK:     80px;
+
+// $spacing-base-size is defined on _01-settings.spacing.scss
+
+  $BOLD_BORDER_RADIUS_NONE:     0;
+  $BOLD_BORDER_RADIUS_QUARCK:   1px;
+  $BOLD_BORDER_RADIUS_NANO:     2px;
+  $BOLD_BORDER_RADIUS_XM:       4px;
+  $BOLD_BORDER_RADIUS_SM:       8px;
+  $BOLD_BORDER_RADIUS_MD:       16px;
+  $BOLD_BORDER_RADIUS_LG:       24px;
+  $BOLD_BORDER_RADIUS_CIRCULAR: 50%;
+
+  $BOLD_BORDER_ELM_01: 1px solid $gray-color-05;
+  $BOLD_BORDER_ELM_02: 1px solid $gray-color-06;
+  $BOLD_BORDER_ELM_03: 2px solid $brand-color-02;
+
+  $BOLD_TRANSITION_ALL_01: all 0.35s ease-out;
