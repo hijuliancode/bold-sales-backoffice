@@ -1,2 +1,56 @@
 // _02-tools.container.scss
 
+.container,
+.container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container,
+.container-fluid-only-mobile,
+.container-fluid-only-desktop {
+  // XXS
+  @include media-bkp-up("xxs") {
+    width: $BOLD_CONTAINER_XXS;
+  }
+  // XS
+  @include media-bkp-up("xs") {
+    width: $BOLD_CONTAINER_XS;
+  }
+  // SM
+  @include media-bkp-up("sm") {
+    width: $BOLD_CONTAINER_SM;
+  }
+  // MD
+  @include media-bkp-up("md") {
+    width: $BOLD_CONTAINER_MD;
+  }
+  // LG
+  @include media-bkp-up("lg") {
+    width: $BOLD_CONTAINER_LG;
+  }
+  // XL
+  @include media-bkp-up("xl") {
+    width: $BOLD_CONTAINER_XL;
+  }
+  // XXL
+  @include media-bkp-up("xxl") {
+    width: $BOLD_CONTAINER_XXL;
+  }
+}
+
+.container-fluid {
+  width: calc(100% - 24px);
+}
+
+.container-fluid-only-mobile {
+  @include media-bkp-max("lg") {
+    width: calc(100% - 24px);
+  }
+}
+
+.container-fluid-only-desktop {
+  @include media-bkp-up("lg") {
+    width: calc(100% - 24px);
+  }
+}
