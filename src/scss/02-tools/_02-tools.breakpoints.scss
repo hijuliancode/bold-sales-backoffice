@@ -1,2 +1,50 @@
 // _02-tools.breakpoints.scss
 
+$breakpoints-up: (
+  "xxs":  ( min-width: $BOLD_BKP_XXS, ), // 0
+  "xs":   ( min-width: $BOLD_BKP_XS, ),  // 312px
+  "sm":   ( min-width: $BOLD_BKP_SM, ),  // 600px
+  "md":   ( min-width: $BOLD_BKP_MD, ),  // 768px
+  "lg":   ( min-width: $BOLD_BKP_LG, ),  // 1024px
+  "xl":   ( min-width: $BOLD_BKP_XL, ),  // 1280px
+  "xxl":  ( min-width: $BOLD_BKP_XXL, )  // 1600px
+) !default;
+
+$breakpoints-max: (
+  "xs":   ( max-width: $BOLD_BKP_XS, ), // 312px
+  "sm":   ( max-width: $BOLD_BKP_SM, ), // 600px
+  "md":   ( max-width: $BOLD_BKP_MD, ), // 768px
+  "lg":   ( max-width: $BOLD_BKP_LG, ), // 1024px
+  "xl":   ( max-width: $BOLD_BKP_XL, ), // 1280px
+  "xxl":  ( max-width: $BOLD_BKP_XXL, ) // 1600px
+) !default;
+
+@mixin media-bkp-up($breakpoint-up) {
+  // If the breakpoint key exists in the $breakpoints-up maps
+  @if map-has-key($breakpoints-up, $breakpoint-up) {
+    @media screen and #{inspect(map-get($breakpoints-up, $breakpoint-up))} {
+      @content;
+    }
+  }
+
+  // If the breakpoint key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Available breakpoints are: #{map-keys($breakpoints-up)}.";
+  }
+}
+
+@mixin media-bkp-max($breakpoint-max) {
+  // If the breakpoint key exists in the $breakpoints-max maps
+  @if map-has-key($breakpoints-max, $breakpoint-max) {
+    @media screen and #{inspect(map-get($breakpoints-max, $breakpoint-max))} {
+      @content;
+    }
+  }
+
+  // If the breakpoint key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+      + "Available breakpoints are: #{map-keys($breakpoints-max)}.";
+  }
+}
