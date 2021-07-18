@@ -7,7 +7,7 @@ export const HeaderLogo = () => {
   return (
     <div className="header__logo">
       <Link href="/" passHref>
-        <><Image src={ logoBold } alt="Bold" height={24} width={72} /></>
+        <span><Image src={ logoBold } alt="Bold" height={24} width={72} /></span>
       </Link>
     </div>
   )
