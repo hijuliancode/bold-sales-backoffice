@@ -36,6 +36,15 @@ body { // To add "specificity"
       .home-features {
         font-size: $BOLD_FONT_SIZE_SM;
         font-weight: $BOLD_FONT_WEIGHT_REGULAR;
+        list-style-type: none;
+
+        .item {
+          margin-bottom: $BOLD_SPACE_STACK_XXS;
+
+          .anticon {
+            margin-right: $BOLD_SPACE_INSET_MD;
+          }
+        }
       }
 
       .home-actions {

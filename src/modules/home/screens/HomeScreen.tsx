@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import bannerImageUrl from '@images/design/misc/hero-lg-3-f2bb805dcc.jpeg'
 import { Button, ButtonEnter } from '@components/index'
+import { CheckCircleOutlined } from '@ant-design/icons'
 
 export const HomeScreen = () => {
   return (
@@ -21,20 +22,28 @@ export const HomeScreen = () => {
             <h2 className="home-title">El datáfono que <br /> lo tiene todo para <br /> tu negocio</h2>
             <ul className="home-features mb-8">
               <li className="item">
+                <CheckCircleOutlined />
                 Recibe tarjetas: <strong>Visa, Mastercard, CODENSA y Amex.</strong>
               </li>
               <li className="item">
+                <CheckCircleOutlined />
                 Cobra con <strong>Link de pago.</strong>
               </li>
               <li className="item">
+                <CheckCircleOutlined />
                 Cero alquileres.
               </li>
               <li className="item">
+                <CheckCircleOutlined />
                 Cero mensualidades.
               </li>
             </ul>
             <div className="home-actions">
-              <Button> Blog </Button>
+              <Button>
+                <a href="https://blog.bold.co/" target="_blank" rel="noreferrer">
+                  <strong>IR A BLOG</strong>
+                </a>
+              </Button>
             </div>
           </div>
           <div className="area-b">

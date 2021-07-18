@@ -19,6 +19,10 @@
     text-decoration: none;
   }
 
+  .header__logo {
+    cursor: pointer;
+  }
+
   &__nav {
     display: flex;
     gap: $BOLD_SPACE_INLINE_MD;
