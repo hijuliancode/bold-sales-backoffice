@@ -1,8 +1,9 @@
 // _05-objects.main.scss
 
 body {
-  .main {
+  main {
+    display: block;
+    // height: 100%; // is defined in global layout
     position: relative;
-    height: 100%;
   }
 }
