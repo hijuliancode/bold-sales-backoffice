@@ -23,7 +23,7 @@ export const HomeScreen = () => {
             <ul className="home-features mb-8">
               <li className="item">
                 <CheckCircleOutlined />
-                Recibe tarjetas: <strong>Visa, Mastercard, CODENSA y Amex.</strong>
+                Recibe tarjetas: <strong>Visa, MasterCard, CODENSA y Amex.</strong>
               </li>
               <li className="item">
                 <CheckCircleOutlined />
