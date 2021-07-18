@@ -15,6 +15,7 @@
     "jsx": "preserve",
     "baseUrl": "./src",
     "paths": {
+      "@images/*": ["../public/images/*"],
       "@components/*": ["components/*"],
       "@context/*": ["context/*"],
       "@core/*": ["core/*"],

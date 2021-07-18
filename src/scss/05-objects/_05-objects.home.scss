@@ -1,7 +1,82 @@
 // _05-objects.home.scss
 
 body { // To add "specificity"
-  .page-home {
-    // Bold home page here!
+  .page-home,
+  .home {
+    // background: linear-gradient(90deg, $brand-color-01 0%, $brand-color-02 100%);
+
+    main { display: flex; align-items: center; justify-content: center; }
+
+    .home__wrapper {
+      background-color: $white-color-full;
+      box-shadow: 0 4px 10px -5px #000;
+      display: grid;
+      grid-template-areas: 'area__a area__b';
+      grid-template-columns: 65% 35%;
+      height: 100%;
+      margin: auto;
+      overflow: hidden;
+      width: 100%;
+
+
+      .home-title,
+      .home-features,
+      .home-actions {
+        color: $brand-color-05;
+        position: relative;
+        z-index: 10;
+      }
+
+      .home-title {
+        font-size: $BOLD_FONT_SIZE_XXXL;
+        font-weight: $BOLD_FONT_WEIGHT_EXTRABOLD;
+        margin-bottom: $BOLD_SPACE_STACK_XL;
+      }
+
+      .home-features {
+        font-size: $BOLD_FONT_SIZE_SM;
+        font-weight: $BOLD_FONT_WEIGHT_REGULAR;
+      }
+
+      .home-actions {
+        .btn {
+          min-width: 320px;
+        }
+      }
+
+      .area-a {
+        display: none;
+        flex-direction: column;
+        grid-area: area__a;
+        justify-content: center;
+        padding: $BOLD_SPACE_INSET_HUGE;
+        position: relative;
+        
+
+        &::after {
+          background: linear-gradient(90deg, $brand-color-01 0%, $brand-color-02 100%);
+          content: "";
+          display: block;
+          height: 100%;
+          left: 0;
+          opacity: 0.55;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 5;
+        }
+
+        @include media-bkp-up('lg') {
+          display: flex;
+        }
+      }
+      
+      .area-b {
+        align-items: center;
+        display: flex;
+        grid-area: area__b;
+        justify-content: center;
+      }
+    }
   }
 }
