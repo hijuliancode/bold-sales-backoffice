@@ -1,7 +1,14 @@
-import '../scss/bold.scss'
 import type { AppProps } from 'next/app'
 
+import { SalesProvider } from 'context/SalesProvider'
+
+import '../scss/bold.scss'
+
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return (
+    <SalesProvider>
+      <Component {...pageProps} />
+    </SalesProvider>
+  )
 }
 export default MyApp
