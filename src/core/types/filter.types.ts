@@ -1,5 +1,5 @@
 export enum FilterTypes {
-  Today = "[Filter] today",
-  Week  = "[Filter] week",
-  Month = "[Filter] month",
+  TODAY = "[Filter] today",
+  WEEK  = "[Filter] week",
+  MONTH = "[Filter] month",
 }
