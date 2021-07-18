@@ -5,8 +5,10 @@ import { HeaderNav } from './HeaderNav'
 export const Header = () => {
   return (
     <header className="header">
-      <HeaderLogo />
-      <HeaderNav />
+      <div className="container d-flex align-items-center justify-content-between">
+        <HeaderLogo />
+        <HeaderNav />
+      </div>
     </header>
   )
 }

@@ -6,8 +6,8 @@ import Link from 'next/link'
 export const HeaderLogo = () => {
   return (
     <div className="header__logo">
-      <Link href="/" passHref={true}>
-        <Image src={ logoBold } alt="Bold" height={24} width={72} />
+      <Link href="/" passHref>
+        <><Image src={ logoBold } alt="Bold" height={24} width={72} /></>
       </Link>
     </div>
   )

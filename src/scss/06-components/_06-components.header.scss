@@ -7,9 +7,8 @@
   display: flex;
   height: $BOLD_HEADER_HEIGHT_MOB;
   justify-content: space-between;
-  margin-bottom: $BOLD_SPACE_STACK_MD;
   padding: $BOLD_SPACE_INSET_SQUISH_SM;
-  
+
   @include media-bkp-up('lg') {
     height: $BOLD_HEADER_HEIGHT_DESK;
   }
