@@ -8,7 +8,6 @@ export interface ISale {
   },
   date: {
     full_date: Date;
-    hour: string;
   },
   payment: {
     provider: 'MasterCard' | 'AmericanExpress' | 'DinersClub';
