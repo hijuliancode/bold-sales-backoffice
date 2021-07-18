@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { useSales } from '@context/index'
 import { FilterTypes } from '@core/types'
 import { CardSales } from '@components/index'
+import { FilterBar } from '@components/FilterBar'
 
 export const SalesScreen = () => {
   const { getSales, getSalesBy } = useSales()
@@ -37,7 +38,12 @@ export const SalesScreen = () => {
 
       <main>
         <div className="container">
-          <CardSales/>
+          <div className="grid xxs-columns-3-9">
+            <CardSales />
+            <div> { /** to prevent full height */ }
+              <FilterBar />
+            </div>
+          </div>
 
           <button onClick={handleClickAllSales}>getAllSales</button>
           <button onClick={handleClickSalesDay}>getSalesByDay</button>
