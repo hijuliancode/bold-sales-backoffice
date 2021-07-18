@@ -6,8 +6,8 @@ import { QuestionCircleOutlined } from '@ant-design/icons';
 export const HeaderNav = () => {
   return (
     <nav className="header__nav">
-      <Link href="/">Mi negocio</Link>
-      <Link href="/">
+      <Link href="#">Mi negocio</Link>
+      <Link href="#" passHref>
         <span>Ayuda <QuestionCircleOutlined /></span>
       </Link>
     </nav>
