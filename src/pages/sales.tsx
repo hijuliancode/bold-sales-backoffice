@@ -1,6 +1,7 @@
-import { FilterTypes } from '@core/types'
-import { useSales } from 'context/SalesContext'
 import Head from 'next/head'
+import { useSales } from '@context/index'
+import { FilterTypes } from '@core/types'
+import { Header } from '@components/index'
 
 export default function SalesPage() {
   const { getSales, getSalesBy } = useSales()
@@ -34,6 +35,7 @@ export default function SalesPage() {
       </Head>
 
       <main>
+        <Header/>
         <h1>SALES</h1>
 
         <button onClick={handleClickAllSales}>getAllSales</button>
