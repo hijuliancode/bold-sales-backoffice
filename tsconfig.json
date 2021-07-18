@@ -20,6 +20,7 @@
       "@core/*": ["core/*"],
       "@models/*": ["core/models/*"],
       "@types/*": ["core/types/*"],
+      "@data/*": ["data/*"],
       "@hooks/*": ["hooks/*"],
       "@layouts/*": ["layouts/*"],
       "@modules/*": ["modules/*"],
