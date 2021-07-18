@@ -1,0 +1,1 @@
+export type PaymentMethodTypes = 'dataphone' | 'payment_link'

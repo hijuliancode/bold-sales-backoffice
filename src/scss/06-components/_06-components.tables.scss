@@ -1,0 +1,82 @@
+// _06-components.tables.scss
+
+.table {
+  background-color: $white-color-full;
+  border-radius: $BOLD_BORDER_RADIUS_SM;
+  margin-bottom: $BOLD_SPACE_STACK_SM;
+  overflow: hidden;
+
+  &-title {
+    align-items: center;
+    background: linear-gradient(90deg, $brand-color-01 40%, $brand-color-02-dark 100%);
+    color: $white-color-full;
+    display: flex;
+    font-size: 20px;
+    height: 48px;
+    justify-content: flex-start;
+    padding: 12px 32px;
+  }
+
+  &-head {
+    border-bottom: 2px solid $gray-color-03;
+    color: $brand-color-03;
+    font-weight: 500;
+    display: flex;
+    font-size: 16px;
+    justify-content: space-between;
+    padding: 16px 32px;
+
+    .head-item {
+      text-align: left;
+      width: 100%;
+    }
+  }
+
+  &-body {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    justify-content: space-between;
+
+    &__tr {
+      display: flex;
+      padding: 12px 32px;
+      width: 100%;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $gray-color-05;
+      }
+      
+
+      .item {
+        color: $brand-color-01;
+        font-size: 16px;
+        width: 100%;
+
+        &--date {
+          color: $brand-color-04;
+        }
+
+        .sale-amount-value,
+        .sale-amount-note,
+        .sale-amount-deduction {
+          display: block;
+          margin-bottom: $BOLD_SPACE_STACK_XXXS;
+        }
+
+        .sale-amount-value { color: $brand-color-01; }
+        .sale-amount-note { color: $brand-color-04; }
+        .sale-amount-deduction { color: $brand-color-02; }
+      }
+    }
+
+    [class*="status-"] {
+      border-left-width: 6px;
+      border-left-style: solid;
+    }
+
+    .status-success { border-left-color: $brand-color-01; }
+    .status-waiting { border-left-color: $brand-color-05; }
+    .status-failed { border-left-color: $brand-color-02; }
+  }
+}

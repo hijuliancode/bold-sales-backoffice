@@ -61,7 +61,6 @@ body { // To add "specificity"
         padding: $BOLD_SPACE_INSET_HUGE;
         position: relative;
         
-
         &::after {
           background: linear-gradient(90deg, $brand-color-01 0%, $brand-color-02 100%);
           content: "";

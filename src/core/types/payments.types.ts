@@ -1,0 +1,1 @@
+export type PaymenProviderstTypes = 'american-express' | 'diners-club' | 'maestro' | 'master-card' | 'visa'

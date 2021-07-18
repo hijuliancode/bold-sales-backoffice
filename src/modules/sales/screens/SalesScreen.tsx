@@ -2,28 +2,32 @@ import React from 'react'
 import Head from 'next/head'
 import { useSales } from '@context/index'
 import { FilterTypes } from '@core/types'
-import { CardSales } from '@components/index'
-import { FilterBar } from '@components/FilterBar'
+import { CardSales, FilterBar, Table } from '@components/index'
+import { dataTableHead } from '@data/table-head-titles.data'
 
 export const SalesScreen = () => {
   const { getSales, getSalesBy } = useSales()
+
+  let table_title = 'Tus ventas de septiembre'
+  let list_sales = getSales
+  let table_head = dataTableHead
 
   const handleClickAllSales = () => {
     console.log(getSales)
   }
 
   const handleClickSalesDay = () => {
-    const list_sales = getSalesBy(FilterTypes.TODAY)
+    list_sales = getSalesBy(FilterTypes.TODAY)
     console.log('getSalesBy(FilterTypes.TODAY)', list_sales)
   }
 
   const handleClickSalesWeek = () => {
-    const list_sales = getSalesBy(FilterTypes.WEEK)
+    list_sales = getSalesBy(FilterTypes.WEEK)
     console.log('getSalesBy(FilterTypes.WEEK)', list_sales)
   }
 
   const handleClickSalesMonth = () => {
-    const list_sales = getSalesBy(FilterTypes.MONTH)
+    list_sales = getSalesBy(FilterTypes.MONTH)
     console.log('getSalesBy(FilterTypes.MONTH)', list_sales)
   }
 
@@ -44,6 +48,7 @@ export const SalesScreen = () => {
               <FilterBar />
             </div>
           </div>
+          <Table sales={ list_sales } headTitles={ table_head } title={table_title} />
 
           <button onClick={handleClickAllSales}>getAllSales</button>
           <button onClick={handleClickSalesDay}>getSalesByDay</button>

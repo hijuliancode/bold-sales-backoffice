@@ -1,4 +1,4 @@
-import { QuestionCircleOutlined } from '@ant-design/icons'
+import { InfoCircleOutlined } from '@ant-design/icons'
 import React from 'react'
 
 export const CardSales = () => {
@@ -6,7 +6,7 @@ export const CardSales = () => {
     <div className="card-sales box-shadow">
       <div className="card-sales-header">
         Total de ventas de <span>hoy</span>
-        <QuestionCircleOutlined />
+        <InfoCircleOutlined />
       </div>
       <div className="card-sales-body">
         <strong className="card-sales-body__value text-colorized">1&apos;560.000</strong>
