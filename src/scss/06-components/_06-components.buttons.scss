@@ -1,0 +1,39 @@
+// _06-components.buttons.scss
+
+[class^="btn"] {
+  background-color: transparent;
+  border: 0;
+}
+
+.btn {
+  background-color: $brand-color-02;
+  border-radius: $BOLD_BORDER_RADIUS_LG;
+  border: 0;
+  color: $brand-color-05;
+  cursor: pointer;
+  padding: $BOLD_SPACE_INSET_SQUISH_SM;
+  transition: .2s all ease-in-out;
+
+  &:hover {
+    background-color: $brand-color-02-dark;
+  }
+}
+
+
+.btn-enter {
+  border-radius: $BOLD_BORDER_RADIUS_XM;
+  border: 4px solid $brand-color-02;
+  color: $brand-color-02;
+  font-size: $BOLD_FONT_SIZE_XXXL;
+  font-weight: $BOLD_FONT_WEIGHT_EXTRABOLD;
+  padding: $BOLD_SPACE_INSET_SQUISH_SM;
+  text-decoration: none;
+  transition: .2s all ease-in-out;
+  a { color: $brand-color-02; transition: .2s all ease-in-out; }
+
+  &:hover {
+    border-color: $brand-color-01;
+    color: $brand-color-01;
+    a { color: $brand-color-01; }
+  }
+}
