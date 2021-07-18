@@ -1,4 +1,4 @@
-import { getMonth } from '@utils/get-this-month'
+import { getMonth } from '@utils/get-this-month.utils'
 import React from 'react'
 
 export const FilterBar = () => {
