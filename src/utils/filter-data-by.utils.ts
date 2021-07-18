@@ -28,7 +28,24 @@ const filterByWeek = (sales_list: ISale[]):ISale[] => {
 }
 
 const filterByMonth = (sales_list: ISale[]):ISale[] => {
-  return sales_list
+  console.log('sales_list', sales_list)
+  const sales_filtered:ISale[] = []
+
+  const today = new Date(),
+        thisYear = today.getFullYear(),
+        thisMonth = today.getMonth() + 1
+
+  sales_list.forEach((sale) => {
+    const saleDate = sale.date.full_date
+
+    if ( thisMonth === saleDate.getMonth() + 1 &&
+         thisYear  === saleDate.getFullYear()
+      ) {
+        sales_filtered.push( sale )
+      }
+    })
+
+  return sales_filtered
 }
 
 export {

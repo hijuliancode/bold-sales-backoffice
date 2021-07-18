@@ -8,7 +8,7 @@ export const salesData: ISale[] = [
       status: 'success',
     },
     date: {
-      full_date: new Date(2021, 1, 1, 3, 24, 0), // 2021/1/1 - 3:24:00
+      full_date: new Date(2021, 1, 1, 3, 24, 0), // 2021/2/1 - 3:24:00
     },
     payment: {
       provider: 'MasterCard',
@@ -29,7 +29,7 @@ export const salesData: ISale[] = [
       status: 'success',
     },
     date: {
-      full_date: new Date(2021, 2, 11, 13, 14, 55), // 2021/1/1 - 13:14:55
+      full_date: new Date(2021, 2, 11, 13, 14, 55), // 2021/3/1 - 13:14:55
     },
     payment: {
       provider: 'AmericanExpress',
@@ -48,7 +48,7 @@ export const salesData: ISale[] = [
       status: 'success',
     },
     date: {
-      full_date: new Date(2021, 9, 11, 5, 15, 55), // 2021/9/11 - 5:15:55
+      full_date: new Date(2021, 9, 11, 5, 15, 55), // 2021/10/11 - 5:15:55
     },
     payment: {
       provider: 'DinersClub',
@@ -90,7 +90,7 @@ export const salesData: ISale[] = [
       status: 'success',
     },
     date: {
-      full_date: new Date(2021, 9, 17, 8, 15, 34), // 2021/9/17 - 8:15:34
+      full_date: new Date(2021, 9, 17, 8, 15, 34), // 2021/10/17 - 8:15:34
     },
     payment: {
       provider: 'MasterCard',
@@ -100,6 +100,48 @@ export const salesData: ISale[] = [
     transaction_id: "IKWL83749JSK1",
     amount: {
       value: 75000,
+    },
+  },
+  {
+    _id: "SL-06",
+    transaction: {
+      type: 'Cobro exitoso',
+      status: 'success',
+    },
+    date: {
+      full_date: new Date(2021, 6, 16, 15, 15, 15), // 2021/7/15 - 15:15:15
+    },
+    payment: {
+      provider: 'DinersClub',
+      last_digits: "2193",
+      method: 'payment_link',
+    },
+    transaction_id: "LKSI28937WOI9",
+    amount: {
+      value: 55000,
+      note: "Deducción Bold",
+      deduction: 11500,
+    },
+  },
+  {
+    _id: "SL-08",
+    transaction: {
+      type: 'Cobro exitoso',
+      status: 'success',
+    },
+    date: {
+      full_date: new Date(),
+    },
+    payment: {
+      provider: 'MasterCard',
+      last_digits: "1212",
+      method: 'dataphone',
+    },
+    transaction_id: "JKAU91736LSK8",
+    amount: {
+      value: 55000,
+      note: "Deducción Bold",
+      deduction: 11500,
     },
   },
 ]
