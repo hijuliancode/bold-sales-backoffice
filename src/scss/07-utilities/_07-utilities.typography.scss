@@ -4,3 +4,10 @@
 .medium     { font-weight: 500; }
 .semibold   { font-weight: 600; }
 .bold       { font-weight: 700; }
+
+// COLOR
+.text-colorized {
+  background-image: linear-gradient(to right, $brand-color-01 0%, $brand-color-02 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

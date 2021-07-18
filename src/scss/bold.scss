@@ -14,6 +14,7 @@
 // ELEMENTS
   @import "./04-elements/04-elements.body";
   @import "./04-elements/04-elements.main";
+  @import "./04-elements/04-elements.a";
 
 // OBJECTS
   @import "./05-objects/05-objects.global-layout";
@@ -24,8 +25,12 @@
 // COMPONENTS
   @import "./06-components/06-components.header";
   @import "./06-components/06-components.buttons";
+  @import "./06-components/06-components.cards";
+  @import "./06-components/06-components.filter-bar";
 
 // UTILITIES
   @import "./07-utilities/07-utilities.demo-and-tests";
   @import "./07-utilities/07-utilities.display";
   @import "./07-utilities/07-utilities.spacing";
+  @import "./07-utilities/07-utilities.typography";
+  @import "./07-utilities/07-utilities.shadows";

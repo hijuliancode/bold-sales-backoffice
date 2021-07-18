@@ -1,0 +1,21 @@
+// _06-components.filter-bar.scss
+
+.filter-bar {
+  background-color: $white-color-full;
+  border-radius: $BOLD_BORDER_RADIUS_XM;
+  display: flex;
+  margin-bottom: $BOLD_SPACE_STACK_SM;
+  overflow: hidden;
+  padding: $BOLD_SPACE_INSET_SQUISH_XS;
+
+  .btn-filter {
+    cursor: pointer;
+    width: 100%;
+
+    &.active {
+      background-color: $brand-color-05;
+      border-radius: 24px;
+      padding: $BOLD_SPACE_INSET_XS $BOLD_SPACE_INSET_XL;
+    }
+  }
+}

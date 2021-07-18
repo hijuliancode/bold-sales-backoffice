@@ -1,4 +1,3 @@
-
 const today = new Date
 
 const firstDay = new Date( today.setDate(today.getDate() - today.getDay() - 6 ) )

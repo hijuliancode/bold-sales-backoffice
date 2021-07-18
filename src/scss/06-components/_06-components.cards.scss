@@ -1,0 +1,42 @@
+// _06-components.cards.scss
+
+.card-sales {
+  border-radius: $BOLD_BORDER_RADIUS_SM;
+  margin-bottom: $BOLD_SPACE_STACK_SM;
+  overflow: hidden;
+
+  .card-sales-header {
+    align-items: center;
+    background: linear-gradient(82deg, $brand-color-01 -63%,$brand-color-02 139%);
+    color: $white-color-full;
+    display: flex;
+    font-weight: $BOLD_FONT_WEIGHT_MEDIUM;
+    height: 48px;
+    justify-content: flex-start;
+    padding: $BOLD_SPACE_INSET_SQUISH_XS;
+
+    span { margin-left: $BOLD_SPACE_INLINE_NANO; }
+
+    .anticon {
+      margin-left: auto;
+    }
+  }
+
+  .card-sales-body {
+    align-items: center;
+    background-color: $white-color-full;
+    display: flex;
+    flex-direction: column;
+    gap: $BOLD_SPACE_STACK_XXXS;
+    height: 120px;
+    justify-content: center;
+
+    .card-sales-body__value {
+      font-size: $BOLD_FONT_SIZE_LG;
+      font-weight: $BOLD_FONT_WEIGHT_EXTRABOLD;
+    }
+    .card-sales-body__date {
+      color: $brand-color-01;
+    }
+  }
+}

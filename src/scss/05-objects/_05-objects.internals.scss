@@ -2,6 +2,6 @@
 
 body { // To add "specificity"
   .page-internal {
-    // Bold internal page here!
+    padding-top: $BOLD_SPACE_STACK_MD;
   }
 }

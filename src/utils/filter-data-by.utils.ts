@@ -1,5 +1,5 @@
 import { ISale } from "@core/models"
-import { getDaysOfWeek } from "./get-days-of-week"
+import { getDaysOfWeek } from "./get-days-of-week.utils"
 
 const filterByDay = (sales_list: ISale[]):ISale[] => {
 

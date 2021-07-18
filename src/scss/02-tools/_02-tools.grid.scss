@@ -66,49 +66,49 @@ $columns: 12;
 @include media-bkp-up("xxs") {
   .grid,
   .grid-xxs {
-    gap: 16px;
+    gap: 24px;
     @include grid-base("xxs");
   }
 }
 
 @include media-bkp-up("xs") {
   .grid-xs {
-    gap: 16px;
+    gap: 24px;
     @include grid-base("xs");
   }
 }
 
 @include media-bkp-up("sm") {
   .grid-sm {
-    gap: 16px;
+    gap: 24px;
     @include grid-base("sm");
   }
 }
 
 @include media-bkp-up("md") {
   .grid-md {
-    gap: 16px;
+    gap: 24px;
     @include grid-base("md");
   }
 }
 
 @include media-bkp-up("lg") {
   .grid-lg {
-    gap: 16px;
+    gap: 24px;
     @include grid-base("lg");
   }
 }
 
 @include media-bkp-up("xl") {
   .grid-xl {
-    gap: 16px;
+    gap: 24px;
     @include grid-base("xl");
   }
 }
 
 @include media-bkp-up("xxl") {
   .grid-xxl {
-    gap: 16px;
+    gap: 24px;
     @include grid-base("xxl");
   }
 }

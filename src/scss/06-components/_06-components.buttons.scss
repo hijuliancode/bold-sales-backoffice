@@ -29,11 +29,13 @@
   padding: $BOLD_SPACE_INSET_SQUISH_SM;
   text-decoration: none;
   transition: .2s all ease-in-out;
-  a { color: $brand-color-02; transition: .2s all ease-in-out; }
+
+  a { color: $brand-color-02; transition: .2s all ease-in-out; text-decoration: underline; }
 
   &:hover {
     border-color: $brand-color-01;
     color: $brand-color-01;
+
     a { color: $brand-color-01; }
   }
 }

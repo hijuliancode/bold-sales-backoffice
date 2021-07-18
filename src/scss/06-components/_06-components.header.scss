@@ -1,5 +1,29 @@
 // _06-components.header.scss
 
 .header {
-  display: block;
+  align-items: center;
+  background: linear-gradient(90deg, $brand-color-01 0%, $brand-color-02 100%);
+  color: $brand-color-05;
+  display: flex;
+  height: $BOLD_HEADER_HEIGHT_MOB;
+  justify-content: space-between;
+  padding: $BOLD_SPACE_INSET_SQUISH_SM;
+
+  @include media-bkp-up('lg') {
+    height: $BOLD_HEADER_HEIGHT_DESK;
+  }
+
+  a {
+    color: $brand-color-05;
+    text-decoration: none;
+  }
+
+  .header__logo {
+    cursor: pointer;
+  }
+
+  &__nav {
+    display: flex;
+    gap: $BOLD_SPACE_INLINE_MD;
+  }
 }
